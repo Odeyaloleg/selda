@@ -15,7 +15,7 @@
 # resolver:
 #  name: custom-snapshot
 #  location: "./custom-snapshot.yaml"
-resolver: lts-13.18
+resolver: lts-18.28
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -37,6 +37,7 @@ resolver: lts-13.18
 # will not be run. This is useful for tweaking upstream packages.
 packages:
 - selda
+- selda-json
 - selda-postgresql
 - selda-sqlite
 - selda-tests
@@ -67,3 +68,4 @@ extra-deps: []
 #
 # Allow a newer minor version of GHC than the snapshot specifies
 # compiler-check: newer-minor
+allow-newer: true

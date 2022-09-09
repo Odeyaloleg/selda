@@ -168,7 +168,7 @@ compInsert cfg tbl defs =
       | any isAutoPrimary (colAttrs col) =
         (n, ppAutoIncInsert cfg, ps)
       | otherwise =
-        (n+1, pack ('$':show n), def:ps)
+        (n, ppAutoIncInsert cfg, ps)
     mkCol n (Right val) _ ps =
         (n+1, pack ('$':show n), val:ps)
 
